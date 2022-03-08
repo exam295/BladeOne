@@ -3,9 +3,6 @@ body {
     background-color: darkgrey;
 }
 
-img {
-
-}
 
 footer{
     background-color: #232B2B;
@@ -17,8 +14,4 @@ footer{
 
   .btn-secondary{
     margin:10px;
-  }
-
-  .text-uppercase text-center mb-3{
-      background-color: black;
   }
