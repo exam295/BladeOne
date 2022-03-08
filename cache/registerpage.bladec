@@ -22,7 +22,7 @@
  <div class="collapse navbar-collapse" id="mynavbar">
  <ul class="navbar-nav me-auto">
  <li class="nav-item">
- <a class="nav-link" href="test.php">Home</a>
+ <a class="nav-link" href="index.php">Home</a>
  </li>
  <li class="nav-item">
  <a class="nav-link" href="registerpage.php">Register</a>
@@ -38,32 +38,41 @@
 
 
 
-<div class="container my-4">
- <div class="row text-center">
- <div class="col-md-6 mb-4">
- <div class= " img"> <h2 class="my-5 h2">Intricate learning environments</h2> </div>
- <img class="rounded-circle " alt="100x100" src="tutoringimage.png"
- data-holder-rendered="true">
+
+<section class="vh-100 bg-image">
+ <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+ <div class="container h-100">
+ <div class="row d-flex justify-content-center align-items-center h-100">
+ <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+ <div class="card" style="border-radius: 15px;">
+ <div class="card-body p-5">
+ <h2 class="text-uppercase text-center mb-3">Select an account</h2>
+ <form>
+ <div class="d-flex justify-content-center">
+ <button type="button" class="btn btn-secondary btn-block btn-lg text-body">Learner</button>
  </div>
- <div class="col-md-6 mb-4">
-
- <h2 class="my-5 h2"><p class="text-right">Welcome to GibJohn Tutoring - The digital tutoring solution for all age ranges and individuals seeking thorough learning.</p></h2>
-<hr/>
- <h2 class="my-5 h2"><p class="text-right">Education availble in the form of digital tutoring and interactive questions and quizzes. There are also quizes and informative feedback!</p></h2>
-
-<hr/>
- <h2 class="my-5 h2"><p class="text-right">We hope you enjoy using our platform!</p></h2>
+ <div class="d-flex justify-content-center">
+ <button type="button" class="btn btn-secondary btn-block btn-lg text-body">Tutor</button>
+ </div>
+ <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.php" class="fw-bold text-body"><u>Login here</u></a></p>
+ </form>
  </div>
  </div>
  </div>
+ </div>
+ </div>
+ </div>
+</section>
 
 
 
 
- 
 
 
-<footer class="page-footer font-small stylish-color-dark pt-4">
+
+
+
+<div class="foot"><footer class="page-footer font-small stylish-color-dark pt-4">
 <!-- Footer Links -->
 <div class="container text-center text-md-left">
  <!-- Grid row -->
@@ -177,6 +186,7 @@
 
 </footer>
 <!-- Footer -->
+</div>
 
 
 
