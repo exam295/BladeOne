@@ -45,10 +45,10 @@
             <h2 class="text-center mb-3">Select an account</h2>
               <form>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-secondary btn-block btn-lg text-body">Learner</button>
+                  <a href="registerpagelearner.php"type="button" class="btn btn-secondary btn-block btn-lg text-body">Learner</a>
                 </div>
                 <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-secondary btn-block btn-lg text-body">Tutor</button>
+                <a href="registerpagetutor.php"type="button" class="btn btn-secondary btn-block btn-lg text-body">Tutor</a>
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">Have an account already? <a href="loginpage.php" class="fw-bold text-body"><u>Login here</u></a></p>
               </form>

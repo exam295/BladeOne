@@ -9,7 +9,8 @@
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-@yield('header')
+
+
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
@@ -36,6 +37,8 @@
 </nav>
 
 
+<div>
+
 
 
 <div class="container my-4">
@@ -58,8 +61,7 @@
   </div>
 
 
-  @yield('content')
-
+</div>
  
 
 
