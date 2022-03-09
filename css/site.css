@@ -1,6 +1,5 @@
-body {
+head, footer {
     color : white;
-    background-color: darkgrey;
 }
 
 
@@ -15,3 +14,16 @@ footer{
   .btn-secondary{
     margin:10px;
   }
+
+
+
+body{
+    background-color: darkgrey;
+}
+
+
+
+input [type=text]{
+
+padding: 10px;
+}

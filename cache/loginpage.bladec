@@ -42,19 +42,18 @@
  <div class="container h-100">
  <div class="row d-flex justify-content-center align-items-center h-100">
  <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+ <form>
  <h2 class="text-center mb-3">Select an account</h2>
  <form>
  <div class="d-flex justify-content-center">
- <button type="button" class="btn btn-secondary btn-block btn-lg text-body">Learner</button>
+ <a href="loginpagelearner.php" type="button" class="btn btn-secondary btn-block btn-lg text-body">Learner</a>
  </div>
  <div class="d-flex justify-content-center">
- <button type="button" class="btn btn-secondary btn-block btn-lg text-body">Tutor</button>
+ <a href="loginpagetutor.php" type="button" class="btn btn-secondary btn-block btn-lg text-body">Tutor</a>
  </div>
  <p class="text-center text-muted mt-5 mb-0">Dont have an account yet? <a href="registerpage.php" class="fw-bold text-body"><u>Register here</u></a></p>
+ </div>
  </form>
- </div>
- </div>
- </div>
  </div>
  </div>
  </div>
@@ -179,13 +178,7 @@
  <a href=""> GibJohnTutoring.com</a>
 </div>
 <!-- Copyright -->
-
 </footer>
-<!-- Footer -->
 </div>
-
-
-
-
 </body>
 </html>
