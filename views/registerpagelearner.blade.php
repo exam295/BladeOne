@@ -46,24 +46,22 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form - Learner</h3>
-            <form>
+            <form action="php/register-action.php" action="POST">
               <div class="row">
                 <div class="col-md-12 mb-8">
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" Placeholder="Full Name"/>
-                    <label class="form-label" for="firstName" >Full Name</label>
+                    <input type="text" name="fullname"class="form-control form-control-lg" Placeholder="Full Name"/>
+                    <label class="form-label" for="fullname" >Full Name</label>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 mb-4 d-flex align-items-center">
                   <div class="form-outline datepicker w-100">
-                    <input
-                      type="date"
-                      class="form-control form-control-lg"
-                      id="birthdayDate"
-                    />
-                    <label for="birthdayDate" class="form-label">Date of Birth</label>
+                  <div class="form-outline">
+                    <input type="number" id="age" name="age" class="form-control form-control-lg" placeholder="Age"/>
+                    <label class="form-label" for="age">Age</label>
+                </div>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -73,7 +71,8 @@
                       class="form-check-input"
                       type="radio"
                       name="inlineRadioOptions"
-                      id="femaleGender"
+                      id="female"
+                      name="female"
                       value="option1"
                       checked
                     />
@@ -84,7 +83,8 @@
                       class="form-check-input"
                       type="radio"
                       name="inlineRadioOptions"
-                      id="maleGender"
+                      id="male"
+                      name="male"
                       value="option2"
                     />
                     <label class="form-check-label" for="maleGender">Male</label>
@@ -94,7 +94,8 @@
                       class="form-check-input"
                       type="radio"
                       name="inlineRadioOptions"
-                      id="otherGender"
+                      id="other"
+                      name="other"
                       value="option3"
                     />
                     <label class="form-check-label" for="otherGender">Other</label>
@@ -104,24 +105,36 @@
               <div class="row">
                 <div class="col-md-6 mb-4 pb-2">
                   <div class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" placeholder="example@example.com""/>
-                    <label class="form-label" for="phoneNumber">Email Address</label>
+                    <input type="email" id="emailaddress" name="email" class="form-control form-control-lg" placeholder="example@example.com"/>
+                    <label class="form-label" for="emailaddress">Email Address</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4 pb-2">
                   <div class="form-outline">
-                    <input type="number" id="phonenumber" class="form-control form-control-lg" placeholder="07887634567" />
+                    <input type="number" id="phonenumber" name="phonenumber" class="form-control form-control-lg" placeholder="07887634567" />
                     <label class="form-label" for="phonenumber">Phone Number</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Username" />
+                    <label class="form-label" for="username">Username</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
+                    <label class="form-label" for="password">Password</label>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                  <select class="select form-control-lg">
+                  <select class="select form-control-lg" id="class" name="class">
                     <option value="1" disabled>Choose Class</option>
-                    <option value="2">Class 1</option>
-                    <option value="3">Class 2</option>
-                    <option value="4">Class 3</option>
+                    <option value="2" id="c2">Class 1</option>
+                    <option value="3" id="c2">Class 2</option>
+                    <option value="4"id="c3">Class 3</option>
                   </select>
                   <label class="form-label select-label">Choose Class</label>
                 </div>
@@ -129,7 +142,7 @@
               <div class="mt-4 pt-2">
                 <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
                 Or if you already have an account log in here ->
-                <a href="loginpagetutor.php" type="button" class="btn btn-outline-primary btn-lrg">Log in</a>
+                <a href="loginpagelearner.php" type="button" class="btn btn-outline-primary btn-lrg">Log in</a>
               </div>
             </form>
           </div>
@@ -138,7 +151,6 @@
     </div>
   </div>
 </section>
-
 
 
 
