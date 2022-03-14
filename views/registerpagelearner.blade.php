@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
@@ -37,8 +36,6 @@
 
 
 
-
-
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row justify-content-center align-items-center h-100">
@@ -46,11 +43,11 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form - Learner</h3>
-            <form action="php/register-action.php" action="POST">
+            <form action="php/register-action-learner.php" method="POST">
               <div class="row">
                 <div class="col-md-12 mb-8">
                   <div class="form-outline">
-                    <input type="text" name="fullname"class="form-control form-control-lg" Placeholder="Full Name"/>
+                    <input type="text" name="fullname" id="fullname" class="form-control form-control-lg" Placeholder="Full Name"/>
                     <label class="form-label" for="fullname" >Full Name</label>
                   </div>
                 </div>
@@ -70,10 +67,9 @@
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
-                      id="female"
-                      name="female"
-                      value="option1"
+                      id="gender"
+                      name="gender"
+                      value="female"
                       checked
                     />
                     <label class="form-check-label" for="femaleGender">Female</label>
@@ -82,10 +78,9 @@
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
-                      id="male"
-                      name="male"
-                      value="option2"
+                      id="gender"
+                      name="gender"
+                      value="male"
                     />
                     <label class="form-check-label" for="maleGender">Male</label>
                   </div>
@@ -93,10 +88,9 @@
                     <input
                       class="form-check-input"
                       type="radio"
-                      name="inlineRadioOptions"
-                      id="other"
-                      name="other"
-                      value="option3"
+                      id="gender"
+                      name="gender"
+                      value="other"
                     />
                     <label class="form-check-label" for="otherGender">Other</label>
                   </div>
@@ -131,10 +125,10 @@
               <div class="row">
                 <div class="col-12">
                   <select class="select form-control-lg" id="class" name="class">
-                    <option value="1" disabled>Choose Class</option>
-                    <option value="2" id="c2">Class 1</option>
-                    <option value="3" id="c2">Class 2</option>
-                    <option value="4"id="c3">Class 3</option>
+                    <option value="0" disabled>Choose Class</option>
+                    <option value="1" id="c2">Class 1</option>
+                    <option value="2" id="c2">Class 2</option>
+                    <option value="3"id="c3">Class 3</option>
                   </select>
                   <label class="form-label select-label">Choose Class</label>
                 </div>
@@ -275,3 +269,7 @@
 
 </body>
 </html>
+
+
+
+

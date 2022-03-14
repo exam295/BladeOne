@@ -1,5 +1,7 @@
 <?php 
 
+print_r($_POST);
+
 //include "dbconnect.php";
 $servername = "localhost";
 $username = "root";
@@ -32,34 +34,38 @@ $learnerclass = $_POST['class'];
         $learnerusername = $conn->real_escape_string($_POST ['username']);
         $learnerpassword = $conn->real_escape_string($_POST ['password']);
         $learnerclass = $conn->real_escape_string($_POST ['class']);
-
         //$sql = "INSERT INTO pets (pet_name, pet_age, pet_type) VALUES  (\"$pet_name\", $pet_age, \"$pet_type\")";
-
         // this is a 2nd way of adding data to a database - this is useful as you dont have to use an excape character for the "" string. You need to do ""'s around strings as they can not be draw out like integers.
         $sql = <<<SQL
-            INSERT INTO registered_learners (LearnerFullname) VALUES ("$learnerfullname")
+            INSERT INTO registered_learners (LearnerFullname, LearnerDateOfBirth, LearnerGender, LearnerEmail, LearnerPhoneNumber, LearnerUsername, LearnerPassword, LearnerClass) VALUES ("$learnerfullname",$learnerdateofbirth,"$learnergender","$learneremail",$learnerphonenumber, "$learnerusername","$learnerpassword","$learnerclass")
         SQL;
 
-        //$sql;
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
-            echo "<br>";
-            echo "USER ID IS:". $conn->insert_id;
-          } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-          }
-		
-	} else {
-		 
-		echo 'Sorry, connection failed!';
-		
-	}
-  //header("Location: display-all-pets-delete.php");
-  die();
-
+          echo "New record created successfully";
+          echo "<br>";
+          echo "USER ID IS:". $conn->insert_id;
+        } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+  
+} else {
+   
+  echo 'Sorry, connection failed!';
+  
+}
 
 
 
 
 
   //, LearnerDateOfBirth, LearnerGender, LearnerEmail, LearnerPhoneNumber LearnerUsername, LearnerPassword, LearnerClass  (, $learnerdateofbirth,"$learnergender","$learneremail","$learnerphonenumber", "$learnerusername","$learnerpassword","$learnerclass")
+
+
+
+
+  //if ($conn->query($sql) === TRUE) {
+    //echo "New record created successfully";
+    //echo "<br>";
+    //echo "USER ID IS:". $conn->insert_id;
+  //} else {
+   // echo "Error: " . $sql . "<br>" . $conn->error;

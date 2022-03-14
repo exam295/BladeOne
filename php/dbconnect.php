@@ -1,36 +1,19 @@
-<?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tlevelexam";
-?>
-
-
 <?php
 
-$conn = mysqli_connect($servername, $username, $password, $dbname)
-				or die ('Sorry, cannot connect to MySQL');
+function connect() {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "tlevelexam";
 
-if ($conn->query($sql) === TRUE) {
-	echo "New record created successfully";
-	echo "<br>";
-  } else {
-	echo "Error: " . $sql . "<br>" . $conn->error;
-  }
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-	$conn = mysqli_connect($servername, $username, $password, $dbname)
-				or die ('Sorry, cannot connect to MySQL');
-	if($conn) {
-		
-		echo 'You have connected to your database!';
-		
-	} else {
-		
-		echo 'Sorry, connection failed!';
-		
-	}
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+    //echo "Connected successfully";
 
-
-
-
-?>
+    return $conn;
+}

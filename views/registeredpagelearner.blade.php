@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+
+
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
@@ -35,120 +37,35 @@
 </nav>
 
 
+<div>
 
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row justify-content-center align-items-center h-100">
-      <div class="col-12 col-lg-9 col-xl-7">
-        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-          <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form - Tutor</h3>
-            <form action="php/register-action-tutor.php" method="POST">
-              <div class="row">
-                <div class="col-md-12 mb-8">
-                  <div class="form-outline">
-                    <input type="text" name="fullname" id="fullname" class="form-control form-control-lg" Placeholder="Full Name"/>
-                    <label class="form-label" for="fullname" >Full Name</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 d-flex align-items-center">
-                  <div class="form-outline datepicker w-100">
-                  <div class="form-outline">
-                    <input type="number" id="age" name="age" class="form-control form-control-lg" placeholder="Age"/>
-                    <label class="form-label" for="age">Age</label>
-                </div>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <h6 class="mb-2 pb-1">Gender: </h6>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="gender"
-                      name="gender"
-                      value="female"
-                      checked
-                    />
-                    <label class="form-check-label" for="femaleGender">Female</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="gender"
-                      name="gender"
-                      value="male"
-                    />
-                    <label class="form-check-label" for="maleGender">Male</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="gender"
-                      name="gender"
-                      value="other"
-                    />
-                    <label class="form-check-label" for="otherGender">Other</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <input type="email" id="emailaddress" name="email" class="form-control form-control-lg" placeholder="example@example.com"/>
-                    <label class="form-label" for="emailaddress">Email Address</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <input type="number" id="phonenumber" name="phonenumber" class="form-control form-control-lg" placeholder="07887634567" />
-                    <label class="form-label" for="phonenumber">Phone Number</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Username" />
-                    <label class="form-label" for="username">Username</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
-                    <label class="form-label" for="password">Password</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <select class="select form-control-lg" id="class" name="class">
-                    <option value="0" disabled>Choose Class</option>
-                    <option value="1" id="c2">Class 1</option>
-                    <option value="2" id="c2">Class 2</option>
-                    <option value="3"id="c3">Class 3</option>
-                  </select>
-                  <label class="form-label select-label">Choose Class</label>
-                </div>
-              </div>
-              <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
-                Or if you already have an account log in here ->
-                <a href="loginpagelearner.php" type="button" class="btn btn-outline-primary btn-lrg">Log in</a>
-              </div>
-            </form>
-          </div>
-        </div>
+
+
+<div class="container my-6">
+    <div class="row text-center">
+      <div class="col-md-6 mb-4">
+        <div class= " img"> <h2 class="my-5 h2">Learner Registered Page</h2> </div>
+        <img class="rounded-circle " alt="100x100" src="gibjohn-register.png"
+          data-holder-rendered="true">
+      </div>
+      <div class="col-md-6 mb-4">
+
+        <h2 class="my-5 h2"><p class="text-center">Thankyou for registering with GibJohn Tutoring! </p></h2>
+<hr/>
+<h2 class="my-5 h2"><p class="text-center">You now have a free to use learner user account!</p></h2>
+<hr/>
+<h2 class="my-5 h2"><p class="text-center">To login press the login button just below and enter your username and password as entered on the register form.</p></h2>
+<a href="loginpagelearner.php"><button type="button" class="btn btn-dark">Login</button></a>
+
+
       </div>
     </div>
   </div>
-</section>
+</div>
+ 
 
 
-
-<div class="foot"><footer class="page-footer font-small stylish-color-dark pt-4">
+<footer class="page-footer font-small stylish-color-dark pt-4">
 <!-- Footer Links -->
 <div class="container text-center text-md-left">
   <!-- Grid row -->
@@ -229,7 +146,7 @@
           <a href="#!">KhanAcademy</a>
         </li>
         <li>
-          <a href="#!">Kahoot</a>
+          <a href="#!">Nrichmaths</a>
         </li>
       </ul>
 
@@ -262,14 +179,9 @@
 
 </footer>
 <!-- Footer -->
-</div>
 
 
 
 
 </body>
 </html>
-
-
-
-

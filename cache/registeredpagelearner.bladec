@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
  <div class="container-fluid">
  <a class="navbar-brand" href="#">
@@ -36,36 +37,35 @@
 </nav>
 
 
-
-
-<section class="vh-100">
- <div class="container py-5 h-100">
- <div class="row d-flex justify-content-center align-items-center h-100">
- <div class="col-12 col-md-8 col-lg-6 col-xl-5">
- <div class="card shadow-2-strong" style="border-radius: 1rem;">
- <div class="card-body p-5 text-center">
- <form action="php/login-action.php" method="POST">
- <div class="form-outline mb-4">
- <h2 class="text-center mb-3">Login - Learner</h2>
- <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Username" />
- </div>
- <div class="form-outline mb-4">
- <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password" />
- </div>
- <!-- Checkbox -->
- <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
- <p class="text-center text-muted mt-5 mb-0">Dont have an account yet? <a href="registerpage.php" class="fw-bold text-body"><u>Register here</u></a></p>
- </div>
- </form>
- </div>
- </div>
- </div>
-</section>
+<div>
 
 
 
+<div class="container my-6">
+ <div class="row text-center">
+ <div class="col-md-6 mb-4">
+ <div class= " img"> <h2 class="my-5 h2">Learner Registered Page</h2> </div>
+ <img class="rounded-circle " alt="100x100" src="gibjohn-register.png"
+ data-holder-rendered="true">
+ </div>
+ <div class="col-md-6 mb-4">
 
-<div class="foot"><footer class="page-footer font-small stylish-color-dark pt-4">
+ <h2 class="my-5 h2"><p class="text-center">Thankyou for registering with GibJohn Tutoring! </p></h2>
+<hr/>
+<h2 class="my-5 h2"><p class="text-center">You now have a free to use learner user account!</p></h2>
+<hr/>
+<h2 class="my-5 h2"><p class="text-center">To login press the login button just below and enter your username and password as entered on the register form.</p></h2>
+<a href="loginpagelearner.php"><button type="button" class="btn btn-dark">Login</button></a>
+
+
+ </div>
+ </div>
+ </div>
+</div>
+ 
+
+
+<footer class="page-footer font-small stylish-color-dark pt-4">
 <!-- Footer Links -->
 <div class="container text-center text-md-left">
  <!-- Grid row -->
@@ -146,7 +146,7 @@
  <a href="#!">KhanAcademy</a>
  </li>
  <li>
- <a href="#!">Kahoot</a>
+ <a href="#!">Nrichmaths</a>
  </li>
  </ul>
 
@@ -179,7 +179,6 @@
 
 </footer>
 <!-- Footer -->
-</div>
 
 
 
