@@ -43,7 +43,7 @@
  <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
  <div class="card-body p-4 p-md-5">
  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form - Learner</h3>
- <form action="php/register-action.php" method="POST">
+ <form action="php/register-action-learner.php" method="POST">
  <div class="row">
  <div class="col-md-12 mb-8">
  <div class="form-outline">
