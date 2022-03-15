@@ -10,6 +10,8 @@
 </head>
 <body>
 
+
+
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">
@@ -42,19 +44,21 @@
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <form action="php/logintutor.php" method="POST">
         <div class="card shadow-2-strong" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
             <div class="form-outline mb-4">
-            <h2 class="text-center mb-3">Login - Tutor</h2>
-              <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" />
+            <h2 class="text-center mb-3">Login - Learner</h2>
+              <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Username" />
             </div>
             <div class="form-outline mb-4">
-              <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" />
+              <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password" />
             </div>
             <!-- Checkbox -->
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" value="login">Login</button>
             <p class="text-center text-muted mt-5 mb-0">Dont have an account yet? <a href="registerpage.php" class="fw-bold text-body"><u>Register here</u></a></p>
         </div>
+      </form>
       </div>
     </div>
   </div>

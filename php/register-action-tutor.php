@@ -54,7 +54,7 @@ $tutorclass = $_POST['class'];
   
 }
 
-
+header('Location: /Projects/Blade-test/test_BladeOne/BladeOne/loginpagetutor.php');
 
   
 

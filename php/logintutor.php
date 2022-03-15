@@ -17,7 +17,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 	exit('Please fill both the username and password fields!');
 }
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-if ($stmt = $con->prepare('SELECT LearnerID, LearnerPassword FROM registered_learners WHERE LearnerUsername = ?')) {
+if ($stmt = $con->prepare('SELECT TutorID,TutorPassword FROM registered_tutors WHERE TutorUsername = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
@@ -36,7 +36,7 @@ if ($stmt = $con->prepare('SELECT LearnerID, LearnerPassword FROM registered_lea
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('Location: loggedinpagelearner.php');
+            header('Location: /Projects/Blade-test/test_BladeOne/BladeOne/loggedinpagetutor.php');
         } else {
             // Incorrect password
             echo 'Incorrect username and/or password!';

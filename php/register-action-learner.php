@@ -55,7 +55,7 @@ $learnerclass = $_POST['class'];
 }
 
 
-
+header('Location: /Projects/Blade-test/test_BladeOne/BladeOne/loginpagelearner.php');
 
 
   //, LearnerDateOfBirth, LearnerGender, LearnerEmail, LearnerPhoneNumber LearnerUsername, LearnerPassword, LearnerClass  (, $learnerdateofbirth,"$learnergender","$learneremail","$learnerphonenumber", "$learnerusername","$learnerpassword","$learnerclass")
