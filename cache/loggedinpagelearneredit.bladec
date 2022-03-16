@@ -55,207 +55,158 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 </nav>
 
 
+
+
+
 <div class="container">
  <div class="main-body">
  <div class="padding">
- 
- <div class="row gutters-sm">
- <div class="col-md-4 mb-3">
+ <div class="row">
+ <div class="col-lg-4">
  <div class="card">
  <div class="card-body">
  <div class="d-flex flex-column align-items-center text-center">
- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+ <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
  <div class="mt-3">
- <h4><?=$_SESSION['name']?></h4>
- <p class="text-secondary mb-1">GibJohn Tutoring Tutor</p>
+ <h4>John Doe</h4>
+ <p class="text-secondary mb-1">Full Stack Developer</p>
+ <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+ <button class="btn btn-primary">Follow</button>
+ <button class="btn btn-outline-primary">Message</button>
  </div>
  </div>
  </div>
  </div>
  </div>
- <div class="col-md-8">
- <div class="card mb-3">
+ <div class="col-lg-8">
+ <div class="card">
  <div class="card-body">
- <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Username</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
- $querey = mysqli_query($conn, 'SELECT * FROM registered_tutors WHERE TutorUsername like "%'. $_SESSION['name'] . '%"');
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
  $row = mysqli_fetch_array($querey);
- $id = $row["TutorID"];
- print($row['TutorUsername']);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" name="usernameupdate" value="<?php $row['LearnerUsername']; ?>">
+ <?php
+ $querey = mysqli_query($conn, 'UPDATE registered_learners  SET lastname = usernameupdate  WHERE LearnerID like "%'. $id . '%"');
  ?>
  </div>
  </div>
- <hr>
- <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Full Name</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
-   $querey = mysqli_query($conn, 'SELECT TutorFullname FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['TutorFullname']);
-   ?>
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
+ $row = mysqli_fetch_array($querey);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" value="<?php $row['LearnerUsername']; ?>">	
  </div>
  </div>
- <hr>
- <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Age</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
-   $querey = mysqli_query($conn, 'SELECT TutorDateOfBirth FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['TutorDateOfBirth']);
-   ?>
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
+ $row = mysqli_fetch_array($querey);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" value="<?php $row['LearnerUsername']; ?>">
  </div>
  </div>
- <hr>
- <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Gender</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
-   $querey = mysqli_query($conn, 'SELECT TutorGender FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['TutorGender']);
-   ?>
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
+ $row = mysqli_fetch_array($querey);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" value="<?php $row['LearnerUsername']; ?>">
  </div>
  </div>
- <hr>
- <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Email</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
-   $querey = mysqli_query($conn, 'SELECT TutorEmail FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['TutorEmail']);
-   ?>
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
+ $row = mysqli_fetch_array($querey);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" value="<?php $row['LearnerUsername']; ?>">
  </div>
  </div>
- <hr>
-   <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Phone Number</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
-   $querey = mysqli_query($conn, 'SELECT TutorPhoneNumber FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['TutorPhoneNumber']);
-   ?>
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
+ $row = mysqli_fetch_array($querey);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" value="<?php $row['LearnerUsername']; ?>">
  </div>
  </div>
- <hr>
-   <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Password</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
-   $querey = mysqli_query($conn, 'SELECT TutorPassword FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['TutorPassword']);
-   ?>
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
+ $row = mysqli_fetch_array($querey);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" value="<?php $row['LearnerUsername']; ?>">
  </div>
  </div>
- <hr>
-   <div class="row">
+ <div class="row mb-3">
  <div class="col-sm-3">
  <h6 class="mb-0">Class</h6>
  </div>
  <div class="col-sm-9 text-secondary">
  <?php
-   $querey = mysqli_query($conn, 'SELECT TutorClass FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['TutorClass']);
-   ?>
+ $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
+ $row = mysqli_fetch_array($querey);
+ $id = $row["LearnerID"];
+ ?>
+ <input type="text" class="form-control" value="<?php $row['LearnerUsername']; ?>">
  </div>
  </div>
- <hr>
  <div class="row">
- <div class="col-sm-12">
- <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Go to your Tutor Dashboard</a>
- </div>
- </div>
- </div>
- </div>
-
- <div class="row gutters-sm">
- <div class="col-sm-6 mb-3">
- <div class="card h-100">
- <div class="card-body">
- <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
- <small>Web Design</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Website Markup</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>One Page</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Mobile Template</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Backend API</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- </div>
- </div>
- </div>
- <div class="col-sm-6 mb-3">
- <div class="card h-100">
- <div class="card-body">
- <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
- <small>Web Design</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Website Markup</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>One Page</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Mobile Template</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Backend API</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+ <div class="col-sm-3"></div>
+ <div class="col-sm-9 text-secondary">
+ <input type="button" class="btn btn-primary px-4" value="Save Changes">
  </div>
  </div>
  </div>
  </div>
  </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+	</div>
 
 
 
- </div>
- </div>
-
- </div>
- 		</div>
- </div>
  
-
 
 <footer class="page-footer font-small stylish-color-dark pt-4">
 <!-- Footer Links -->
@@ -379,4 +330,3 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 
 </body>
 </html>
-
