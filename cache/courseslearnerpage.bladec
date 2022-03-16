@@ -1,28 +1,7 @@
-<?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
-// If the user is not logged in redirect to the login page...
-if (!isset($_SESSION['loggedin'])) {
-	//header('Location: index.html');
-	exit;
-}
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tlevelexam";
-
-
-
-$conn = mysqli_connect($servername, $username, $password, $dbname)
- or die("Connection Failed");
-$querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>logged in Page</title>
+<title>Bootstrap Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -30,7 +9,6 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-
 
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -50,218 +28,20 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <li class="nav-item">
  <a class="nav-link" href="registerpage.php">Register</a>
  </li>
+ <li class="nav-item">
+ <a class="nav-link" href="loginpage.php">Login</a>
+ </li>
  </ul>
  </div>
  </div>
 </nav>
 
-<div>
-	
-</div>
-
-<div class="container">
- <div class="main-body">
- <div class="padding">
- <div class="row gutters-sm">
- <div class="col-md-4 mb-3">
- <div class="card">
- <div class="card-body">
- <div class="d-flex flex-column align-items-center text-center">
-   
- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
- <div class="mt-3">
- <h4><?=$_SESSION['name']?></h4>
- <p class="text-secondary mb-1">GibJohn Tutoring Learner</p>
- </div>
- </div>
- </div>
- </div>
- </div>
- <div class="col-md-8">
- <div class="card mb-3">
- <div class="card-body">
- <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Username</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
- $querey = mysqli_query($conn, 'SELECT * FROM registered_learners WHERE LearnerUsername like "%'. $_SESSION['name'] . '%"');
- $row = mysqli_fetch_array($querey);
- $id = $row["LearnerID"];
- print($row['LearnerUsername']);
- ?>
- </div>
- </div>
- <hr>
- <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Full Name</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
-   $querey = mysqli_query($conn, 'SELECT LearnerFullname FROM registered_learners WHERE LearnerID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['LearnerFullname']);
-   ?>
- </div>
- </div>
- <hr>
- <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Age</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
-   $querey = mysqli_query($conn, 'SELECT LearnerDateOfBirth FROM registered_learners WHERE LearnerID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['LearnerDateOfBirth']);
-   ?>
- </div>
- </div>
- <hr>
- <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Gender</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
-   $querey = mysqli_query($conn, 'SELECT LearnerGender FROM registered_learners WHERE LearnerID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['LearnerGender']);
-   ?>
- </div>
- </div>
- <hr>
- <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Email</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
-   $querey = mysqli_query($conn, 'SELECT LearnerEmail FROM registered_learners WHERE LearnerID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['LearnerEmail']);
-   ?>
- </div>
- </div>
- <hr>
-   <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Phone Number</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
-   $querey = mysqli_query($conn, 'SELECT LearnerPhoneNumber FROM registered_learners WHERE LearnerID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['LearnerPhoneNumber']);
-   ?>
- </div>
- </div>
- <hr>
-   <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Password</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
-   $querey = mysqli_query($conn, 'SELECT LearnerPassword FROM registered_learners WHERE LearnerID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['LearnerPassword']);
-   ?>
- </div>
- </div>
- <hr>
-   <div class="row">
- <div class="col-sm-3">
- <h6 class="mb-0">Class</h6>
- </div>
- <div class="col-sm-9 text-secondary">
- <?php
-   $querey = mysqli_query($conn, 'SELECT LearnerClass FROM registered_learners WHERE LearnerID like "%'. $id . '%"');
-   $row = mysqli_fetch_array($querey);
-   print($row['LearnerClass']);
-   ?>
- </div>
- </div>
- <hr>
- <div class="row">
- <div class="col-sm-12">
- <a class="btn btn-info " target="__blank" href="learnerdashboard.php">Go To your Learner Dasahboard</a>
- </div>
- </div>
- </div>
- </div>
-
- <div class="row gutters-sm">
- <div class="col-sm-6 mb-3">
- <div class="card h-100">
- <div class="card-body">
- <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Courses</i>Status</h6>
- <small>Web Design</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Website Markup</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>One Page</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Mobile Template</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Backend API</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- </div>
- </div>
- </div>
- <div class="col-sm-6 mb-3">
- <div class="card h-100">
- <div class="card-body">
- <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Quiz</i>Results</h6>
- <small>Web Design</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Website Markup</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>One Page</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Mobile Template</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- <small>Backend API</small>
- <div class="progress mb-3" style="height: 5px">
- <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
- </div>
- </div>
- </div>
- </div>
- </div>
 
 
 
- </div>
- </div>
-
- </div>
- 		</div>
- </div>
  
 
-
-<footer class="page-footer font-small stylish-color-dark pt-4">
+<footer class="page-footer font-small stylish-color-dark pt-4 container-fluid text-center">
 <!-- Footer Links -->
 <div class="container text-center text-md-left">
  <!-- Grid row -->
@@ -383,4 +163,3 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 
 </body>
 </html>
-

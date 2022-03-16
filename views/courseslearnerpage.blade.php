@@ -1,24 +1,3 @@
-<?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
-// If the user is not logged in redirect to the login page...
-if (!isset($_SESSION['loggedin'])) {
-	//header('Location: index.html');
-	exit;
-}
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tlevelexam";
-
-
-
-$conn = mysqli_connect($servername, $username, $password, $dbname)
-    or die("Connection Failed");
-$querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,30 +37,9 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 </nav>
 
 
-<section class="vh-100">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-      <form action="php/loginlearner.php" method="POST">
-        <div class="card shadow-2-strong" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
-            <div class="form-outline mb-4">
-            <h2 class="text-center mb-3">Welcome, <strong> <?=$_SESSION['name']?> </strong> to your student dashboard</h2>
-            <div class="paddingg">
-            <a href="loggedinpagelearner.php"><button type="button" class="btn btn-outline-secondary ">User Details</button></a>
-            <a href="courseslearnerpage.php"><button type="button" class="btn btn-outline-secondary  ">Student Courses</button></a>
-            <a href="furtherlearninglearner.php"><button type="button" class="btn btn-outline-secondary  ">Further Learning</button></a>
-            <a href="#"><button type="button" class="btn btn-outline-secondary  ">Quiz Results</button></a>
-            </div>
-      </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 
-
-
+  
 
 <footer class="page-footer font-small stylish-color-dark pt-4 container-fluid text-center">
 <!-- Footer Links -->
@@ -181,7 +139,7 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
     <h5 class="mb-1">Register for free</h5>
   </li>
   <li class="list-inline-item">
-    <a href="registerpage.php" class="btn btn-light btn-rounded">Register Here!</a>
+    <a href="#!" class="btn btn-light btn-rounded">Register Here!</a>
   </li>
 </ul>
 <!-- Call to action -->
