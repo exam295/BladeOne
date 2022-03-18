@@ -19,6 +19,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname)
 $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,29 +59,50 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 </nav>
 
 
-<section class="vh-100">
- <div class="container py-5 h-100">
- <div class="row d-flex justify-content-center align-items-center h-100">
- <div class="col-12 col-md-8 col-lg-6 col-xl-5">
- <form action="php/loginlearner.php" method="POST">
- <div class="card shadow-2-strong" style="border-radius: 1rem;">
- <div class="card-body p-5 text-center">
- <div class="form-outline mb-4">
- <h2 class="text-center mb-3">Welcome, <strong> <?=$_SESSION['name']?> </strong> to your student dashboard</h2>
- <div class="paddingg">
- <a href="loggedinpagelearner.php"><button type="button" class="btn btn-outline-secondary ">User Details</button></a>
- <a href="courseslearnerpage.php"><button type="button" class="btn btn-outline-secondary  ">Student Courses</button></a>
- <a href="furtherlearninglearner.php"><button type="button" class="btn btn-outline-secondary  ">Further Learning</button></a>
- <a href="#"><button type="button" class="btn btn-outline-secondary  ">Quiz Results</button></a>
- </div>
- </form>
+
+<div class="container">
+ <div class="main-body">
+ <div class="padding">
+ <div class="row gutters-sm">
+ <div class="col-md-4 mb-3">
+ <div class="card">
+ <div class="card-body">
+ <div class="d-flex flex-column align-items-center text-center">
+ <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="UserImage" class="rounded-circle" width="150">
+ <div class="mt-3">
+ <h4><?=$_SESSION['name']?></h4>
+ <p class="text-secondary mb-1">GibJohn Tutoring Learner</p>
+ <a class="btn btn-info " target="__blank" href="learnerdashboard.php">Go To your Learner Dasahboard</a>
  </div>
  </div>
  </div>
-</section>
+ </div>
+ </div>
+ <div class="col-md-8">
+ <div class="card mb-3">
+ <div class="card-body">
+ <div class="row">
+ <h1>Maths - Unit A1</h1>
+ Pythagoras' theorem -
+ The longest side of a right-angled triangle is the hypotenuse. The hypotenuse is always opposite the right angle.
+ <img src="maths1learnerimage1.png" alt="UserImage">
+ Draw a square on each side of a right-angled triangle. Calculate the area of each square.
+ <img src="maths1learnerimage2.png" alt="UserImage">
+ Pythagoras' theorem states that, in any right-angled triangle, the square of the hypotenuse is equal to the sum of the squares on the other two sides.
+
+ If the sides of the right-angled triangle are labelled a, b and c  then Pythagoras' theorem states: a2 + b2 = c2
+ <img src="maths1learnerimage3.png" alt="UserImage">
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
 
 
 
+ 
 
 
 <footer class="page-footer font-small stylish-color-dark pt-4 container-fluid text-center">
@@ -181,7 +203,7 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <h5 class="mb-1">Register for free</h5>
  </li>
  <li class="list-inline-item">
- <a href="registerpage.php" class="btn btn-light btn-rounded">Register Here!</a>
+ <a href="#!" class="btn btn-light btn-rounded">Register Here!</a>
  </li>
 </ul>
 <!-- Call to action -->

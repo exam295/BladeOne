@@ -26,11 +26,9 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 <title>Bootstrap Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="css/site.css">
-
-
 </head>
 <body>
 
@@ -84,8 +82,16 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
-                        <p><h1>My Courses</h1></p>
-                        <p><h3>This is where you can find your courses</h3></p>
+                        <h1>Maths - Unit A1</h1>
+                        Pythagoras' theorem -
+                        The longest side of a right-angled triangle is the hypotenuse. The hypotenuse is always opposite the right angle.
+                        <img src="maths1learnerimage1.png" alt="UserImage">
+                        Draw a square on each side of a right-angled triangle. Calculate the area of each square.
+                        <img src="maths1learnerimage2.png" alt="UserImage">
+                        Pythagoras' theorem states that, in any right-angled triangle, the square of the hypotenuse is equal to the sum of the squares on the other two sides.
+
+                        If the sides of the right-angled triangle are labelled a, b and c  then Pythagoras' theorem states: a2 + b2 = c2
+                        <img src="maths1learnerimage3.png" alt="UserImage">
                  </div>
               </div>
           </div>
@@ -97,58 +103,6 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 
 
             
-<div class="container">
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Maths</h4>
-          </div>
-            <div class="card-body" id="div_id">
-                <h1 class="card-title pricing-card-title">Topic <small class="text-muted">A1</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Dummy Text</li>
-                        <li>Dummy Text</li>
-                        <li>Dummy Text</li>
-                        <li>Dummy Text</li>
-                    </ul>
-                <a href="maths1learner.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
-            </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">English</h4>
-          </div>
-          <div class="card-body">
-          <h1 class="card-title pricing-card-title">Topic <small class="text-muted">A1</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Dummy Text</li>
-              <li>Dummy Text</li>
-              <li>Dummy Text</li>
-              <li>Dummy Text</li>
-            </ul>
-            <a href="index.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Science</h4>
-          </div>
-          <div class="card-body">
-          <h1 class="card-title pricing-card-title">Topic <small class="text-muted">A1</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Dummy Text</li>
-              <li>Dummy Text</li>
-              <li>Dummy Text</li>
-              <li>Dummy Text</li>
-            </ul>
-            <a href="index.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-
 
 
 <footer class="page-footer font-small stylish-color-dark pt-4 container-fluid text-center">
