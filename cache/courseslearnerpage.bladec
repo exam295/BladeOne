@@ -101,9 +101,9 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <div class="card-deck mb-3 text-center">
  <div class="card mb-4 box-shadow">
  <div class="card-header">
- <h4 class="my-0 font-weight-normal">Maths</h4>
+ <h4 class="my-0 font-weight-normal" id="maths1">Maths</h4>
  </div>
- <div class="card-body" id="div_id">
+ <div class="card-body">
  <h1 class="card-title pricing-card-title">Topic <small class="text-muted">A1</small></h1>
  <ul class="list-unstyled mt-3 mb-4">
  <li>Dummy Text</li>
@@ -126,7 +126,7 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  </ul>
- <a href="index.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
+ <a href="english1learner.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
  </div>
  </div>
  <div class="card mb-4 box-shadow">
@@ -147,6 +147,17 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  </div>
  </div>
 </div>
+
+
+
+<script type="text/javascript">
+ document.getElementById("maths1").onload = function() {
+ document.getElementById("maths1").style.display = "none";
+ 
+ }
+ 
+
+ </script>
 
 
 

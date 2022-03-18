@@ -92,6 +92,7 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 
                         If the sides of the right-angled triangle are labelled a, b and c  then Pythagoras' theorem states: a2 + b2 = c2
                         <img src="maths1learnerimage3.png" alt="UserImage">
+                        <strong>SRC: BBC Bitesize</strong>
                  </div>
               </div>
           </div>

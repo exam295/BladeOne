@@ -46,3 +46,12 @@ a{
 .invisible {
   visibility: hidden !important;
 }
+
+
+
+#div_id {
+  /*height: 400px;*/
+   visibility:hidden;
+}
+
+

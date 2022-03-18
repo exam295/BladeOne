@@ -97,7 +97,6 @@ The time of day or year when a text is set also adds to its effect. For example,
 
 The writer may use specific techniques to create a particular effect. For example, the writer could use pathetic fallacy to give emphasis to a character’s emotions: “The memory of that afternoon lay heavy upon her. All around the snow smothered the landscape.” In this description, the character’s negative emotional state is reflected by the weather.
 
-<br/>
 
 Historical context is important when understanding the setting of a piece of fiction.
 
