@@ -1,6 +1,6 @@
-@extends('app')
+<?php $_shouldextend[1]=1; ?>
 
-@section('content')
+<?php $this->startSection('content'); ?>
 
 <?php
 
@@ -21,19 +21,20 @@ $dbname = "tlevelexam";
 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname)
-    or die("Connection Failed");
+ or die("Connection Failed");
 $querey = mysqli_query ($conn, 'SELECT LearnerClass FROM registered_learners');
 
 $learnerclass= $querey;
 
 if($learnerclass == "1"){
-  header("Location:maths1learner.php");
+ header("Location:maths1learner.php");
 } else if($learnerclass == "2") {
-  header("Location:maths2learner.php");
+ header("Location:maths2learner.php");
 }
 
 ?>
 
 <p> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA </p>
 
-@endsection
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('app'); } ?>
