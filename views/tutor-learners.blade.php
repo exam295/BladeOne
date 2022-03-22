@@ -6,10 +6,42 @@ if (!isset($_SESSION['loggedin'])) {
 	//header('Location: index.html');
 	exit;
 }
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tlevelexam";
+
+
+
+$conn = mysqli_connect($servername, $username, $password, $dbname)
+    or die("Connection Failed");
+$querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
+
+
+
+$querey1 = mysqli_query($conn, 'SELECT * FROM registered_tutors WHERE TutorUsername like "%'. $_SESSION['name'] . '%"');
+$roww = mysqli_fetch_array($querey1);
+$id = $roww["TutorID"];
+
+
+
+
+$querey = mysqli_query($conn, 'SELECT TutorClass FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
+$row = mysqli_fetch_array($querey);
+$tc = $row["TutorClass"];
+
+
+
+
+
 ?>
 @extends('app')
 
+
 @section('content')
+
+
 
 
 
@@ -24,7 +56,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="UserImage" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4><?=$_SESSION['name']?></h4>
-                      <p class="text-secondary mb-1">GibJohn Tutoring Learner</p>
+                      <p class="text-secondary mb-1">GibJohn Tutoring Tutor</p>
                       <a class="btn btn-info " target="__blank" href="learnerdashboard.php">Go To your Learner Dasahboard</a>
                     </div>
                   </div>
@@ -35,17 +67,7 @@ if (!isset($_SESSION['loggedin'])) {
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
-                        <h1>Maths - Unit A1</h1>
-                        Pythagoras' theorem -
-                        The longest side of a right-angled triangle is the hypotenuse. The hypotenuse is always opposite the right angle.
-                        <img src="maths1learnerimage1.png" alt="UserImage">
-                        Draw a square on each side of a right-angled triangle. Calculate the area of each square.
-                        <img src="maths1learnerimage2.png" alt="UserImage">
-                        Pythagoras' theorem states that, in any right-angled triangle, the square of the hypotenuse is equal to the sum of the squares on the other two sides.
-
-                        If the sides of the right-angled triangle are labelled a, b and c  then Pythagoras' theorem states: a2 + b2 = c2
-                        <img src="maths1learnerimage3.png" alt="UserImage">
-                        <strong>SRC: BBC Bitesize</strong>
+                    Students under your Tutor Class of - <?=$tc = $row["TutorClass"]?> include:
                  </div>
               </div>
           </div>
@@ -54,7 +76,6 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
 </div>
 </div>
-
 
 
 @endsection

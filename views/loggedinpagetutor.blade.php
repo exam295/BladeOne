@@ -183,7 +183,7 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Go to your Tutor Dashboard</a>
+                      <a class="btn btn-info " target="__blank" href="tutordashboard.php">Go to your Tutor Dashboard</a>
                     </div>
                   </div>
                 </div>

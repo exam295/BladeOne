@@ -68,10 +68,10 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
             <div class="form-outline mb-4">
             <h2 class="text-center mb-3">Welcome, <strong> <?=$_SESSION['name']?> </strong> to your student dashboard</h2>
             <div class="paddingg">
-            <a href="loggedinpagelearner.php"><button type="button" class="btn btn-outline-secondary ">User Details</button></a>
-            <a href="courseslearnerpage.php"><button type="button" class="btn btn-outline-secondary  ">Student Courses</button></a>
+            <a href="loggedinpagetutor.php"><button type="button" class="btn btn-outline-secondary ">User Details</button></a>
+            <a href="tutor-learners.php"><button type="button" class="btn btn-outline-secondary  ">Students</button></a>
             <a href="furtherlearninglearner.php"><button type="button" class="btn btn-outline-secondary  ">Further Learning</button></a>
-            <a href="#"><button type="button" class="btn btn-outline-secondary  ">Quiz Results</button></a>
+            <a href="#"><button type="button" class="btn btn-outline-secondary  ">Quiz Results - Students</button></a>
             </div>
       </form>
       </div>
