@@ -35,26 +35,20 @@ if (!isset($_SESSION['loggedin'])) {
  <div class="card mb-3">
  <div class="card-body">
  <div class="row">
- <h1>English - Unit A1</h1>
- Critical essay - 
- Analysis in critical reading
- The following is a mind map charting areas for analysis in critical reading.
- <img src="english1learnerimage.png" alt="UserImage">
- <strong>Themes</strong>
- Theme is not a technique as such, but rather the central idea or ideas explored and developed in the text.
-
- Most texts will explore more than one theme, although they might not all be as significant as each other. Themes are developed through techniques.
-
- For example, the themes explored in Macbeth include guilt, order/disorder and false appearance.
-
- Plot refers to the deliberate sequencing of events in the text while the 'story' is simply an account of what happens.
-
-Writers may play about with time scales, so a plot sequence may not be chronological (as it happens in real time). You should always ask yourself why a writer might have structured a story in sections. How does it add to your understanding of the story or themes?
-
-Part of good storytelling is ensuring readers want to find out what happens next. Writers use different devices to maintain the reader's focus and attention.
+ <h1>Maths - Unit A1</h1>
+ Blood transports materials and heat around the body and helps to protect against disease. It contains:
+ plasma
+ red blood cells
+ white blood cells
+ platelets
+ Plasma is a straw-coloured liquid that makes up just over half the volume of blood.
+ <img src="science1learnerimage.png" alt="UserImage">
+ Red Blood Cells - contain haemoglobin - a red protein that combines with oxygen
+ they have no nucleus so they can contain more haemoglobin
+ small and flexible so that they can fit through narrow blood vessels
+ their job is to transport oxygen.
+ <img src="science1learnerimage2.png" alt="redbloodcells">
  <strong>SRC: BBC Bitesize</strong>
-
- 
  </div>
  </div>
  </div>

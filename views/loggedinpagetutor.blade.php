@@ -85,7 +85,7 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
 					$querey = mysqli_query($conn, 'SELECT * FROM registered_tutors WHERE TutorUsername like "%'. $_SESSION['name'] . '%"');
 					$row = mysqli_fetch_array($querey);
 					$id = $row["TutorID"];
-					print($row['TutorUsername']);
+					print($_SESSION['name']);
 					?>
                     </div>
                   </div>

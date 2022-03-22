@@ -50,6 +50,9 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
         <li class="nav-item">
           <a class="nav-link" href="registerpage.php">Register</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="php/logout.php">Logout</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -198,23 +201,23 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
                   <div class="card h-100">
                     <div class="card-body">
                       <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Courses</i>Status</h6>
-                      <small>Web Design</small>
+                      <small>Maths</small>
                       <div class="progress mb-3" style="height: 5px">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>Website Markup</small>
+                      <small>English</small>
                       <div class="progress mb-3" style="height: 5px">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>One Page</small>
+                      <small>Science</small>
                       <div class="progress mb-3" style="height: 5px">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>Mobile Template</small>
+                      <small>Computing</small>
                       <div class="progress mb-3" style="height: 5px">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>Backend API</small>
+                      <small>Software Development</small>
                       <div class="progress mb-3" style="height: 5px">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>

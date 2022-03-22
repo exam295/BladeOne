@@ -35,26 +35,26 @@ if (!isset($_SESSION['loggedin'])) {
  <div class="card mb-3">
  <div class="card-body">
  <div class="row">
- <h1>English - Unit A1</h1>
- Critical essay - 
- Analysis in critical reading
- The following is a mind map charting areas for analysis in critical reading.
- <img src="english1learnerimage.png" alt="UserImage">
- <strong>Themes</strong>
- Theme is not a technique as such, but rather the central idea or ideas explored and developed in the text.
+ <h1>English - Unit A3</h1>
+ Purpose and audience
+ When we talk about the purpose of a text, we are talking about what the writer wants to achieve. 
+ Writers use language and structural features to deliberately appeal to their intended audience.
+ <img src="english3learnerimage.png" alt="englishimage3" >
+ Think TAP.
+ A writer has an aim when writing a text - they want to have an effect on their reader.
 
- Most texts will explore more than one theme, although they might not all be as significant as each other. Themes are developed through techniques.
+A text can have many purposes. Some examples are to:
 
- For example, the themes explored in Macbeth include guilt, order/disorder and false appearance.
-
- Plot refers to the deliberate sequencing of events in the text while the 'story' is simply an account of what happens.
-
-Writers may play about with time scales, so a plot sequence may not be chronological (as it happens in real time). You should always ask yourself why a writer might have structured a story in sections. How does it add to your understanding of the story or themes?
-
-Part of good storytelling is ensuring readers want to find out what happens next. Writers use different devices to maintain the reader's focus and attention.
+entertain – to amuse the reader or make them enjoy reading the text
+persuade – to influence the viewpoint of the reader - these texts may be biased
+advise – to help people decide what to do - these texts may give ideas and options
+analyse – to break down something to help people to understand it better
+argue – to make the case for something - these texts may be one-sided
+describe – to give precise details about a person, place, object or experience
+explain – to make clear ‘how’ and ‘why’ something works or happens in a certain way
+inform – to tell a reader about something they don’t know, or add to their knowledge
+instruct – to tell a reader how to do something, ordered step-by-step
  <strong>SRC: BBC Bitesize</strong>
-
- 
  </div>
  </div>
  </div>

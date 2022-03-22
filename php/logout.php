@@ -2,7 +2,7 @@
 
 session_destroy();
 
-header('Location: index.php');
+header('Location: /Projects/Blade-test/test_BladeOne/BladeOne/test.php');
 
 
 ?>

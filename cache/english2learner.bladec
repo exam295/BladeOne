@@ -35,26 +35,20 @@ if (!isset($_SESSION['loggedin'])) {
  <div class="card mb-3">
  <div class="card-body">
  <div class="row">
- <h1>English - Unit A1</h1>
- Critical essay - 
- Analysis in critical reading
- The following is a mind map charting areas for analysis in critical reading.
- <img src="english1learnerimage.png" alt="UserImage">
- <strong>Themes</strong>
- Theme is not a technique as such, but rather the central idea or ideas explored and developed in the text.
+ <h1>English Unit - A2</h1>
+ Annotating texts-
+ Annotating is a useful way to keep a track of what you notice while you’re reading – the notes and marks you make can focus on particular details in the text. For example, if you were focusing on setting, you could circle all the words and phrases used to describe that place.
 
- Most texts will explore more than one theme, although they might not all be as significant as each other. Themes are developed through techniques.
+ There are many ways to annotate texts. Try out different approaches to see what works best for you. Examples of common techniques include:
 
- For example, the themes explored in Macbeth include guilt, order/disorder and false appearance.
+ circling or underlining words or phrases that are interesting or important and writing notes in the margin
+ using different coloured highlighters to pick out different ideas, techniques or details
+ using one margin to make a note of literary devices and the other margin to add your own responses
+ Closely annotating texts is an effective way to practise analysing a piece of fiction.
 
- Plot refers to the deliberate sequencing of events in the text while the 'story' is simply an account of what happens.
-
-Writers may play about with time scales, so a plot sequence may not be chronological (as it happens in real time). You should always ask yourself why a writer might have structured a story in sections. How does it add to your understanding of the story or themes?
-
-Part of good storytelling is ensuring readers want to find out what happens next. Writers use different devices to maintain the reader's focus and attention.
+ However, in exam conditions, annotations need to be brief and a quick way of responding to a new text. You can use your annotations to pick out details from the text and then develop your analysis of these details in your written response.
+ <img src="english2learnerimage1.png" alt="UserImage">
  <strong>SRC: BBC Bitesize</strong>
-
- 
  </div>
  </div>
  </div>

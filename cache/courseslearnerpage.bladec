@@ -53,7 +53,7 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <a class="nav-link" href="registerpage.php">Register</a>
  </li>
  <li class="nav-item">
- <a class="nav-link" href="loginpage.php">Login</a>
+ <a class="nav-link" href="php/logout.php">Logout</a>
  </li>
  </ul>
  </div>
@@ -104,14 +104,14 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <h4 class="my-0 font-weight-normal" id="maths1">Maths</h4>
  </div>
  <div class="card-body">
- <h1 class="card-title pricing-card-title">Topic <small class="text-muted">A1</small></h1>
+ <h1 class="card-title pricing-card-title">Maths content and Quiz <small class="text-muted"> Yay!</small></h1>
  <ul class="list-unstyled mt-3 mb-4">
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  </ul>
- <a href="maths1learner.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
+ <a href="php/mathsredirect.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
  </div>
  </div>
  <div class="card mb-4 box-shadow">
@@ -119,14 +119,14 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <h4 class="my-0 font-weight-normal">English</h4>
  </div>
  <div class="card-body">
- <h1 class="card-title pricing-card-title">Topic <small class="text-muted">A1</small></h1>
+ <h1 class="card-title pricing-card-title">English content and Quiz<small class="text-muted">Yay!</small></h1>
  <ul class="list-unstyled mt-3 mb-4">
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  </ul>
- <a href="english1learner.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
+ <a href="php/englishredirect.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
  </div>
  </div>
  <div class="card mb-4 box-shadow">
@@ -134,14 +134,14 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
  <h4 class="my-0 font-weight-normal">Science</h4>
  </div>
  <div class="card-body">
- <h1 class="card-title pricing-card-title">Topic <small class="text-muted">A1</small></h1>
+ <h1 class="card-title pricing-card-title">Science content and Quiz <small class="text-muted">Yay!</small></h1>
  <ul class="list-unstyled mt-3 mb-4">
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  <li>Dummy Text</li>
  </ul>
- <a href="index.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
+ <a href="php/scienceredirect.php" button type="button" class="btn btn-lg btn-block btn-outline-primary" >Continue</a>
  </div>
  </div>
  </div>
