@@ -36,13 +36,14 @@ if ($stmt = $con->prepare('SELECT LearnerID, LearnerPassword FROM registered_lea
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('Location: /Projects/Blade-test/test_BladeOne/BladeOne/loggedinpagelearner.php');
         } else {
             // Incorrect password
+            header("Location:/Projects/Blade-test/test_BladeOne/BladeOne/loginpageerrorp.php")
             echo 'Incorrect username and/or password!';
         }
     } else {
         // Incorrect username
+        header('Location: /Projects/Blade-test/test_BladeOne/BladeOne/loginpageerroru.php');
         echo 'Incorrect username and/or password!';
     }
 

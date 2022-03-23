@@ -36,12 +36,10 @@ $tc = $row["TutorClass"];
 
 
 ?>
+
 @extends('app')
 
-
 @section('content')
-
-
 
 
 
@@ -103,99 +101,27 @@ $conn = mysqli_connect($servername, $username, $password, $dbname)
     echo"<table>";
     ?>
 
-<div class="container bootstrap snippets bootdey">
-    <div class="col-md-6">
-        <div class="panel">
-            <header class="panel-heading">
-                goal progress
-                <span class="tools pull-right">
-                    <a href="#" class="fa fa-chevron-down"></a>
-                    <a href="#" class="fa fa-times"></a>
-                 </span>
-            </header>
-            <div class="panel-body">
-                <ul class="goal-progress">
-                    <li>
-                        <div class="prog-avatar">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="title">
-                                <a href="#"></a> - Project Lead
-                            </div>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                    <span class="">70%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="prog-avatar">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="title">
-                                <a href="#">Cameron Doe</a> - Sales
-                            </div>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 91%">
-                                    <span class="">91%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="prog-avatar">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="title">
-                                <a href="#">Hoffman Doe</a> - Support
-                            </div>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span class="">40%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="prog-avatar">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="title">
-                                <a href="#">Jane Doe</a> - Marketing
-                            </div>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                    <span class="">20%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="prog-avatar">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="">
-                        </div>
-                        <div class="details">
-                            <div class="title">
-                                <a href="#">Hoffman Doe</a> - Support
-                            </div>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-                                    <span class="">45%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="text-center"><a href="#">View all Goals</a></div>
-            </div>
+
+`               </div>
+              </div>
+          </div>
         </div>
+      </div>
     </div>
 </div>
+</div>
+
+
+<div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active">
+    Cras justo odio
+  </button>
+  <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+  <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+  <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+  <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+</div>
+
 
 
 
