@@ -49,6 +49,9 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
         <li class="nav-item">
           <a class="nav-link" href="registerpage.php">Register</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="php/logout.php">Logout</a>
+        </li>
       </ul>
     </div>
   </div>
