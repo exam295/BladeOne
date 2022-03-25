@@ -29,13 +29,13 @@ $querey = mysqli_query ($conn, 'SELECT * FROM registered_learners');
     <div class="question ml-sm-5 pl-sm-5 pt-2">
         <div class="py-2 h5"><b>Q. which option for pythagoras' theorem is the correct answer?</b></div>
         <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
-             <label class="options">a2 + b2 = c2 <input type="radio" name="radiocorrect" value="correct">
+             <label class="options">a2 + b2 = c2 <input type="radio" name="radiocorrect" value="1">
               <span class="checkmark"></span>
-             </label> <label class="options">e = mx2 <input type="radio" name="radioincorrect1" value="incorrect">
+             </label> <label class="options">e = mx2 <input type="radio" name="radioincorrect1" value="0">
               <span class="checkmark"></span> </label>
-             <label class="options" >SOHCAHTOA <input type="radio" name="radioincorrect2">
+             <label class="options" >SOHCAHTOA <input type="radio" name="radioincorrect2" value="0">
              <span class="checkmark"></span> </label> 
-             <label class="options">Other <input type="radio" name="radioincorrect3"> <span class="checkmark"value="incorrect"></span> </label>
+             <label class="options">Other <input type="radio" name="radioincorrect3"> <span class="checkmark"value="0"></span> </label>
             </div>
     </div>
     <div class="d-flex align-items-center pt-3">

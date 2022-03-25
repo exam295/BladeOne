@@ -10,7 +10,6 @@ $dbname = "tlevelexam";
 
 
 
-$learnerid = $_POST['id'];
 $learnerscore = $_POST['learnerscore'];
 
 
@@ -20,18 +19,12 @@ $learnerscore = $_POST['learnerscore'];
 		
 		echo 'You have connected to your database!';
 
-        $learnerfullname = $conn->real_escape_string($_POST ['fullname']);
-        $learnerdateofbirth = $conn->real_escape_string($_POST ['age']);
-        $learnergender = $conn->real_escape_string($_POST ['gender']);
-        $learneremail = $conn->real_escape_string($_POST ['email']);
-        $learnerphonenumber = $conn->real_escape_string($_POST ['phonenumber']);
-        $learnerusername = $conn->real_escape_string($_POST ['username']);
-        $learnerpassword = $conn->real_escape_string($_POST ['password']);
-        $learnerclass = $conn->real_escape_string($_POST ['class']);
+        $learnerid = $conn->real_escape_string($_POST ['id']);
+        $learnerscore = $conn->real_escape_string($_POST ['score']);
         //$sql = "INSERT INTO pets (pet_name, pet_age, pet_type) VALUES  (\"$pet_name\", $pet_age, \"$pet_type\")";
         // this is a 2nd way of adding data to a database - this is useful as you dont have to use an excape character for the "" string. You need to do ""'s around strings as they can not be draw out like integers.
         $sql = <<<SQL
-            INSERT INTO registered_learners (LearnerFullname, LearnerDateOfBirth, LearnerGender, LearnerEmail, LearnerPhoneNumber, LearnerUsername, LearnerPassword, LearnerClass) VALUES ("$learnerfullname",$learnerdateofbirth,"$learnergender","$learneremail",$learnerphonenumber, "$learnerusername","$learnerpassword","$learnerclass")
+            INSERT INTO quizresults_learners (LearnerID, Learner_Score) VALUES ("$learnerid", "$learnerscore")
         SQL;
 
         if ($conn->query($sql) === TRUE) {

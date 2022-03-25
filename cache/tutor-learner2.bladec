@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/progressbar.php">
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
@@ -28,6 +29,27 @@ $id = $roww["TutorID"];
 $querey = mysqli_query($conn, 'SELECT TutorClass FROM registered_tutors WHERE TutorID like "%'. $id . '%"');
 $row = mysqli_fetch_array($querey);
 $tc = $row["TutorClass"];
+
+
+
+
+$querey = mysqli_query($conn, 'SELECT Learner_Score FROM quizresults_learners');
+$row = mysqli_fetch_array($querey);
+$ls = $row["Learner_Score"];
+
+print($ls);
+
+
+//$querey = mysqli_query($conn, 'SELECT LearnerID FROM quizresults_learners WHERE LarnerID IN (SELECT LearnerID FROM registered_learners)');
+
+$querey = mysqli_query($conn, 'SELECT Learner_Score FROM quizresults_learners');
+$row = mysqli_fetch_array($querey);
+$ls = $row["Learner_Score"];
+
+print($ls);
+
+$testint = $ls;
+
 
 ?>
 <?php $_shouldextend[1]=1; ?>
@@ -80,12 +102,12 @@ a{
  <button type="button" class="list-group-item list-group-item-action">
  STUDENT 1
  <div class="progress">
- <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+ <div class="progress-bar" role="progressbar" style="width: <?php print($testint); ?>;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div></a>
 <button type="button" class="list-group-item list-group-item-action">
 STUDENT 2
  <div class="progress">
- <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+ <div class="progress-bar" role="progressbar" style="width: <?php print($testint); ?>;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 </div></a>
 <button type="button" class="list-group-item list-group-item-action">
 STUDENT 3
@@ -97,6 +119,41 @@ STUDENT5
  <div class="progress">
  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 </div></a>
+<button type="button" class="list-group-item list-group-item-action">
+
+<?php
+
+$sql = 'SELECT * FROM registered_learners WHERE LearnerClass  like "%'. $tc . '%"';
+
+$query = mysqli_query($conn, $sql);
+
+echo "
+<table>
+ <tr>
+ <th>Learner ID</th>
+ <th>Leaner Name</th>
+ <th>Learner Age</th>
+ <th>Class</th>
+ <th> Progress </th>
+ </tr> ";
+ 
+
+while ($row = mysqli_fetch_array($query))
+{
+ echo "<tr>
+ <td> ". $row['LearnerID'] . "</td>
+ <td> ". $row['LearnerFullname'] . "</td>
+ <td> ". $row['LearnerDateOfBirth'] . "</td>
+ <td> ". $row['LearnerClass'] . "</td>
+ <td>". print($testint). "</td>
+ </tr>";
+
+}
+
+echo"<table>";
+?>
+
+
  </div>
  </div>
  </div>
