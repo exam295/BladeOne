@@ -35,7 +35,7 @@ if (!isset($_SESSION['loggedin'])) {
  <div class="card mb-3">
  <div class="card-body">
  <div class="row">
- <h1>Maths - Unit A1</h1>
+ <h1>Science - Unit A1</h1>
  Blood transports materials and heat around the body and helps to protect against disease. It contains:
  plasma
  red blood cells

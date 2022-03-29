@@ -7,10 +7,11 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 ?>
+<!-- this is the template part that extends that app.blade.php ( index basically, but mine is app instead )  -->
 @extends('app')
 
 @section('content')
-
+<!-- This is the content part and this bit changes for each page. All content is between this section adn @endsection. -->
 
 
 <div class="container">
@@ -55,6 +56,7 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
 </div>
 
+<!-- This is  all the html for the bootstrap template. This is Maths 1 Unit A1. -->
 
 
 @endsection
