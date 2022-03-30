@@ -1,0 +1,10 @@
+<?php $_shouldextend[1]=1; ?>
+
+
+
+<?php $this->startSection('content'); ?>
+
+<h1> This is some content in between the navigation bar and footer </h1>
+
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('app'); } ?>
